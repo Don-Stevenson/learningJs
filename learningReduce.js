@@ -16,20 +16,24 @@
 //   )
 // );
 
-//flattening arrays with reduce
+//flattening arrays with reduce and trying recursion.  Recursion can't be used as below to solve with reduce
+const arrayToBeFlattend = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+  [[7, 8]]
+];
 
-// flatten with Reduce and Recursion
-    const arrayToBeFlattend = [
-      [1, 2],
-      [3, 4],
-      [5, 6],
-      [7, 8]
-    ];
-
-const flatten = (arr) => { 
-    return arr.reduce(
-  (accumulator, currentValue) => accumulator.concat(currentValue),
-  []
-);
-}
+const flatten = arr => {
+ let newArr = arr.reduce(
+    (accumulator, currentValue) => accumulator.concat(currentValue),
+    []
+  );
+  for (let element of newArr) {
+      if (Array.isArray(element)){
+          return flatten(element)
+      } else return newArr
+  }
+};
 console.log(flatten(arrayToBeFlattend));
+// expected is [ 1, 2, 3, 4, 5, 6, [ 7, 8 ] ]
