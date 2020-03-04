@@ -17,16 +17,19 @@
 // );
 
 //flattening arrays with reduce
-const arrayToBeFlatted = [
-  [1, 2],
-  [3, 4],
-  [5, 6],
-  [7, 8]
-];
 
-console.log(
-  arrayToBeFlatted.reduce(
-    (accumulator, currentValue) => accumulator.concat(currentValue),
-    []
-  )
+// flatten with Reduce and Recursion
+    const arrayToBeFlattend = [
+      [1, 2],
+      [3, 4],
+      [5, 6],
+      [7, 8]
+    ];
+
+const flatten = (arr) => { 
+    return arr.reduce(
+  (accumulator, currentValue) => accumulator.concat(currentValue),
+  []
 );
+}
+console.log(flatten(arrayToBeFlattend));
