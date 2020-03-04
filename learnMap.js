@@ -10,4 +10,4 @@ console.log(map(array));
 // map outside of a function
 const mappedArr = array.map(element => element * 3);
 
-// console.log(mappedArr);
+console.log(mappedArr);
