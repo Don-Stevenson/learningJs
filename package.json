@@ -1,0 +1,23 @@
+{
+  "name": "learningJs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "asyncAwait.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Don-Stevenson/learningJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Don-Stevenson/learningJs/issues"
+  },
+  "homepage": "https://github.com/Don-Stevenson/learningJs#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
