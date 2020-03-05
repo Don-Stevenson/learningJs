@@ -1,10 +1,16 @@
-const delayTime = () => { setTimeout(2*1000, console.log("slowed by two seconds"))}
+const delayTime = () => {
+  setTimeout(function() {
+    console.log("slowed by two seconds");
+  }, 500);
+};
 
-const doSomething = () => {
+console.log(delayTime());
+
+async function doSomething() {
   try {
-      let awaitTimeOut = await delayTime()
-      console.log("here",awaitTimeOut)
+    let awaitTimeOut = await delayTime();
+    console.log("here", awaitTimeOut);
   } catch (error) {
     console.error(error);
   }
-};
+}
