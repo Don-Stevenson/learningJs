@@ -26,9 +26,17 @@ async function fetchAvatarUrl(userId) {
   const response = await fetch(
     `https://catappapi.herokuapp.com/users/${userId}`
   );
-  const data = await response.json();
+  const user = await response.json();
 
-  console.log(data.imageUrl);
+  return await Promise.all(
+    user.cats.map(async function(catId) {
+      const response = await fetch(
+        `https://catappapi.herokuapp.com/cats/${catId}`
+      );
+      const catData = await response.json();
+      console.log(catData.imageUrl);
+    })
+  );
 
   //   return fetch(`https://catappapi.herokuapp.com/users/${userId}`)
   // .then(response => response.json())
