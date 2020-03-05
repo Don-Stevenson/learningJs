@@ -1,10 +1,8 @@
 const delayTime = () => {
   setTimeout(function() {
     console.log("slowed by two seconds");
-  }, 500);
+  }, 2 *1000);
 };
-
-console.log(delayTime());
 
 async function doSomething() {
   try {
@@ -14,3 +12,5 @@ async function doSomething() {
     console.error(error);
   }
 }
+
+doSomething();
