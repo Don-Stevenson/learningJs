@@ -1,4 +1,5 @@
 // // set timeout function to mimic a server response
+//*************************************************** */
 // const fakeServerResponse = () => {
 //   setTimeout(function() {
 //     console.log("slowed by two seconds");
@@ -7,7 +8,8 @@
 
 // // console.log(fakeServerResponse());
 
-// // trying to use async await
+// // exploring async 
+// ******************
 // async function doSomething() {
 //   try {
 //       let serverResponse = await fakeServerResponse();
@@ -20,6 +22,7 @@
 // console.log(doSomething());
 
 // following along with fun fun function
+// *************************************
 const fetch = require("node-fetch");
 
 async function fetchAvatarUrl(userId) {
@@ -37,7 +40,8 @@ async function fetchAvatarUrl(userId) {
       console.log(catData.imageUrl);
     })
   );
-
+  // comparing promises approach
+  // ***************************
   //   return fetch(`https://catappapi.herokuapp.com/users/${userId}`)
   // .then(response => response.json())
   // .then(data => data.imageUrl);
