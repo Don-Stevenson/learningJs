@@ -8,7 +8,7 @@
 
 // // console.log(fakeServerResponse());
 
-// // exploring async 
+// // exploring async
 // ******************
 // async function doSomething() {
 //   try {
@@ -39,7 +39,7 @@ async function fetchAvatarUrl(userId) {
       const catData = await response.json();
       console.log(catData.imageUrl);
     })
-  );
+  ).catch(e => console.error(e));
   // comparing promises approach
   // ***************************
   //   return fetch(`https://catappapi.herokuapp.com/users/${userId}`)
